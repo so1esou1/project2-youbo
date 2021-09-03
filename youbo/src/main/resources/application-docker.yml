@@ -1,0 +1,31 @@
+server:
+  port: 8081
+# DataSource Config
+spring:
+  datasource:
+    url: jdbc:mysql://mysqlyou:3306/youbo?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+    #    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+  freemarker:
+    settings:
+      classic_compatible: true
+      datetime_format: yyyy-MM-dd HH:mm
+      number_format: 0.##
+  redis:
+    host: boredis
+    port: 6379
+    password:
+
+  data:
+    elasticsearch:
+      cluster-name: kobe
+      cluster-nodes: ees:9300     #9200
+      repositories:
+        enabled: true
+  rabbitmq:
+    username: root            #guest
+    password: admin      #guest   #password
+    host: borabbit
+    port: 5672
